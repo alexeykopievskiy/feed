@@ -1,0 +1,50 @@
+{
+  "iphone6": {
+    "name": "iPhone 6 (375)",
+    "styles": {
+      "height": "667px",
+      "width": "375px"
+    },
+    "type": "mobile"
+  },
+  "ipad": {
+    "name": "iPad (768)",
+    "styles": {
+      "height": "1024px",
+      "width": "768px"
+    },
+    "type": "tablet"
+  },
+  "ipad12p": {
+    "name": "iPad Pro 12.9-in (1024)",
+    "styles": {
+      "height": "1366px",
+      "width": "1024px"
+    },
+    "type": "tablet"
+  },
+  "notebook": {
+    "name": "Some Notebook (1200)",
+    "styles": {
+      "height": "600px",
+      "width": "1200px"
+    },
+    "type": "desktop"
+  },
+  "wxga": {
+    "name": "WXGA++ (1600)",
+    "styles": {
+      "height": "900px",
+      "width": "1600px"
+    },
+    "type": "desktop"
+  },
+  "fhd": {
+    "name": "Full HD (1920)",
+    "styles": {
+      "height": "1080px",
+      "width": "1920px"
+    },
+    "type": "desktop"
+  }
+}

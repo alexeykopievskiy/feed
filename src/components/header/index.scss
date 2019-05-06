@@ -1,0 +1,56 @@
+.header {
+  height: 60px;
+  border-bottom: 1px solid #e0e0e8;
+  padding: 0 42px;
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 48px;
+  margin-top: -2px;
+}
+
+.nav-bar {
+  display: flex;
+  align-items: center;
+}
+
+.nav {
+  margin: 0 0 0 50px;
+
+  &-item {
+    color: #9f9fab;
+    font-size: 14px;
+    font-weight: 400;
+    margin-right: 30px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: #3b3a3a;
+      font-weight: 700;
+    }
+
+    &:visited {
+      color: #3b3a3a;
+    }
+  }
+}
+
+.status-bar {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  width: 29px;
+  height: 29px;
+  margin-left: 25px;
+}

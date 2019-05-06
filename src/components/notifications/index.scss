@@ -1,0 +1,14 @@
+.notification-bar {
+  display: flex;
+  margin-right: 27px;
+}
+
+.notification-item {
+  margin-right: 17px;
+  display: flex;
+  align-items: center;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}

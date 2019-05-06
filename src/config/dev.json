@@ -1,0 +1,9 @@
+{
+  "baseApiPath": "https://api.stage.rentashop.tmweb.ru",
+  "accessTokenKey": "dev.access.token",
+  "refreshTokenKey": "dev.refresh.token",
+  "tokenExpiresKey": "dev.token.expires",
+  "ssrPort": 3000,
+  "dadataBaseApiPath": "https://suggestions.dadata.ru/suggestions/api/4_1/rs/suggest/",
+  "dadataApiKey": "accdc972abdb7c30f641b0ddbfde44c0153c8bd3"
+}

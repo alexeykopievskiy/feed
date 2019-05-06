@@ -1,0 +1,7 @@
+:root {
+  --base-font-family: 'Open Sans', sans-serif !important;
+  --layout-max-width: 1608px;
+  --layout-min-width: 282px;
+  --layout-padding: 56px;
+  --layout-mobile-padding: 32px;
+}

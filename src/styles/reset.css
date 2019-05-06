@@ -1,0 +1,47 @@
+* {
+  &,
+  &::after,
+  &::before {
+    box-sizing: border-box;
+  }
+}
+
+html {
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+blockquote,
+q {
+  quotes: none;
+  margin: 0;
+
+  &::after,
+  &::before {
+    content: '';
+    content: none;
+  }
+}
+
+a,
+button,
+select,
+textarea,
+input[type='text'],
+input[type='password'],
+input[type='reset'],
+input[type='submit'] {
+  outline: none;
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px white inset;
+}

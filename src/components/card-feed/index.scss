@@ -1,0 +1,156 @@
+.container {
+  width: 240px;
+  display: flex;
+  padding: 15px 0 18px;
+  border-radius: 14px;
+
+  &--hover {
+    background-color: #f6f7fb;
+  }
+}
+
+.inner {
+  width: 220px;
+  margin: auto;
+  flex-direction: column;
+}
+
+.icon {
+  &-tokens {
+    margin-right: 6px;
+  }
+
+  &-comments {
+    margin-right: 7px;
+    top: 3px;
+    position: relative;
+  }
+
+  &-like {
+    margin-right: 6px;
+  }
+
+  &-more {
+    display: none;
+  }
+
+  &--hover {
+    display: block;
+  }
+}
+
+.title {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.content {
+  &-top {
+    position: absolute;
+    top: 14px;
+    color: #ffffff;
+  }
+
+  &-bottom {
+    position: absolute;
+    bottom: 14px;
+  }
+
+  &-main {
+    position: relative;
+  }
+
+  &-description {
+    padding-right: 20px;
+    margin: 0;
+    font-size: 12px;
+    color: #d8d6ff;
+  }
+
+  &-hover {
+    padding: 16px;
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+    width: 220px;
+    height: 161px;
+    background: rgba(78, 71, 238, 0.85);
+    border-radius: 8px;
+  }
+
+  &--hover {
+    display: block;
+  }
+}
+
+.comments {
+  &-text {
+    font-size: 12px;
+    position: relative;
+    top: -1px;
+  }
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  color: #3b3a3a;
+  font-size: 12px;
+  height: 28px;
+  border-radius: 35px;
+  border: 1px solid #e0e0e8;
+  padding: 0 9px;
+
+  &-btn {
+    margin-right: 7px;
+
+    &:hover {
+      background: transparent;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &-text {
+    color: #3b3a3a;
+    position: relative;
+    top: 0px;
+    height: 18px;
+  }
+}
+
+.avatar {
+  margin-right: 12px;
+  width: 17px;
+}
+
+.header {
+  margin-bottom: 15px;
+
+  &-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &-title {
+    margin: 0;
+    color: #3b3a3a;
+    font-weight: 400;
+    font-size: 12px;
+  }
+
+  &-author {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.footer {
+  margin-top: 18px;
+  display: flex;
+  align-items: center;
+}

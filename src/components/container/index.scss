@@ -1,0 +1,27 @@
+@import '../../styles/adaptive.css';
+@import '../../styles/variables.css';
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  width: 100%;
+}
+
+.row {
+  margin: 0 auto;
+  max-width: var(--layout-max-width);
+  min-width: var(--layout-min-width);
+}
+
+@media (--tablet) {
+  .container {
+    padding-left: var(--layout-mobile-padding);
+    padding-right: var(--layout-mobile-padding);
+    width: 100%;
+  }
+  
+  .row {
+    min-width: auto;
+  }
+}

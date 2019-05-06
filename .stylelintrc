@@ -1,0 +1,12 @@
+{
+  "extends": "stylelint-config-standard",
+  "rules": {
+    "color-hex-case": "lower",
+    "color-hex-length": "long",
+    "custom-property-empty-line-before": "never",
+    "indentation": 2,
+    "rule-empty-line-before": ["always-multi-line", {
+        "except": "first-nested"
+    }],
+  }
+}
