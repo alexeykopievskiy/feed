@@ -23,6 +23,7 @@ class CardFeed extends React.PureComponent {
     this.state = {
       isCardHover: false,
       isAuthorActive: false,
+      isDropdownActive: false,
     };
   }
 
@@ -34,9 +35,13 @@ class CardFeed extends React.PureComponent {
     this.setState({ isAuthorActive: !this.state.isAuthorActive });
   };
 
+  handleDropdownClick = () => {
+    this.setState({ isDropdownActive: !this.state.isDropdownActive });
+  };
+
   render() {
     const { className } = this.props;
-    const { isCardHover, isAuthorActive } = this.state;
+    const { isCardHover, isAuthorActive, isDropdownActive } = this.state;
 
     return (
       <div
@@ -47,6 +52,26 @@ class CardFeed extends React.PureComponent {
           isCardHover && styles['container--hover']
         )}
       >
+        {isDropdownActive && (
+          <div className={styles['dropdown']}>
+            <Button theme="null" className={styles['dropdown-btn']}>
+              <Icon className={styles['dropdown-icon']} name="hide" size={16} />
+              <span className={styles['dropdown-text']}>Hide</span>
+            </Button>
+            <Button theme="null" className={styles['dropdown-btn']}>
+              <Icon className={styles['dropdown-icon']} name="flag" size={16} />
+              <span className={styles['dropdown-text']}>Flag</span>
+            </Button>
+            <Button theme="null" className={styles['dropdown-btn']}>
+              <Icon
+                className={styles['dropdown-icon']}
+                name="share"
+                size={16}
+              />
+              <span className={styles['dropdown-text']}>Share</span>
+            </Button>
+          </div>
+        )}
         {isAuthorActive && (
           <div className={styles['popup-author']}>
             <div
@@ -127,7 +152,7 @@ class CardFeed extends React.PureComponent {
                 <p className={styles['header-title']}>Bruno montero</p>
               </div>
             </Button>
-            <Button theme="null">
+            <Button theme="null" onClick={this.handleDropdownClick}>
               <Icon
                 name="more"
                 className={cls(
