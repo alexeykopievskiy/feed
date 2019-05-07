@@ -1,7 +1,4 @@
 .button {
-  width: 112px;
-  height: 28px;
-  border-radius: 43px;
   color: #fff;
   font-size: 10px;
   font-weight: 500;
@@ -37,4 +34,41 @@
   background: transparent;
   box-shadow: none;
   padding: 0;
+}
+
+.dark {
+  background-color: #3b3a3a;
+  box-shadow: none;
+  color: #fff;
+  font-weight: 500;
+  font-size: 10px;
+
+  &:visited {
+    background-color: #3b3a3a;
+    color: #fff;
+  }
+
+  &:hover, 
+  &:focus {
+    background-color: #ff84c2;
+    color: #fff;
+  }
+
+  &:active {
+    border: 1px solid #d2d2db;
+    background-color: #fff;
+    color: #3b3a3a;
+  }
+}
+
+.md {
+  height: 28px;
+  width: 112px;
+  border-radius: 43px;
+}
+
+.sm {
+  height: 28px;
+  border-radius: 35px;
+  padding: 0 20px;
 }

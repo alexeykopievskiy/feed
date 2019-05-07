@@ -10,6 +10,10 @@ import tokens from './svg/tokens';
 import more from './svg/more';
 import like from './svg/like';
 import comments from './svg/comments';
+import hide from './svg/hide';
+import share from './svg/share';
+import flag from './svg/flag';
+import followers from './svg/followers';
 
 const { bool, number, func, string } = PropTypes;
 
@@ -21,6 +25,10 @@ const components = {
   more,
   like,
   comments,
+  hide,
+  share,
+  flag,
+  followers,
 };
 
 const xmlns = 'http://www.w3.org/2000/svg';

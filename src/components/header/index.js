@@ -36,7 +36,7 @@ const Header = props => {
       </div>
       <div className={styles['status-bar']}>
         <Notifications />
-        <Button>Create project</Button>
+        <Button size="md">Create project</Button>
         <div className={styles['avatar']}>
           <Button theme="null">
             <img src={avatar} />

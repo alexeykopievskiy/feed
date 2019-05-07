@@ -16,6 +16,10 @@ stories.add('x24', () => {
       <Icon name="like" className={styles.icon} />
       <Icon name="more" className={styles.icon} />
       <Icon name="comments" className={styles.icon} />
+      <Icon name="hide" className={styles.icon} />
+      <Icon name="share" className={styles.icon} />
+      <Icon name="flag" className={styles.icon} />
+      <Icon name="followers" className={styles.icon} />
     </div>
   );
 });
