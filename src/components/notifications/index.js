@@ -14,7 +14,7 @@ const Notifications = props => {
       </div>
       <div className={styles['notification-item']}>
         <Button theme="null">
-          <Icon name="messages" size={16} />
+          <Icon name="messages" notification="true" size={16} />
         </Button>
       </div>
       <div className={styles['notification-item']}>

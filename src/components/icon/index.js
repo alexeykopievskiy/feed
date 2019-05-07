@@ -34,35 +34,80 @@ const components = {
 const xmlns = 'http://www.w3.org/2000/svg';
 const version = 1.1;
 
-const Icon = props => {
-  const { size, name, png, onClick, ...iconProps } = props;
-  const Component = components[name];
-  let className = cls(styles.icon, props.className, png && styles.png);
+class Icon extends React.PureComponent {
+  constructor(props) {
+    super(props);
 
-  if (png) {
-    return (
-      <img
-        onClick={onClick}
-        className={className}
-        width={size}
-        height={size}
-        src={Component}
-        alt=""
-      />
-    );
-  } else if (Component) {
-    return (
-      <Component
-        {...{ xmlns, version, onClick, ...iconProps }}
-        className={className}
-        width={size}
-        height={size}
-      />
-    );
+    this.state = {
+      isIconHovered: false,
+      isIconActive: false,
+    };
   }
 
-  return null;
-};
+  onIconHover = () => {
+    this.setState({ isIconHovered: !this.state.isIconHovered });
+  };
+
+  onIconPush = () => {
+    console.log('push');
+    this.setState({ isIconActive: !this.state.isIconActive });
+  };
+
+  render() {
+    const {
+      size,
+      name,
+      png,
+      onClick,
+      hover,
+      hovered,
+      notification,
+      ...iconProps
+    } = this.props;
+    const { isIconHovered, isIconActive } = this.state;
+    const Component = components[name];
+    let className = cls(styles.icon, this.props.className, png && styles.png);
+
+    let iconHover =
+      isIconHovered || hovered || isIconActive
+        ? hover
+          ? hover
+          : isIconActive
+          ? '#9f9fab'
+          : '#4e47ee'
+        : '#3b3a3a';
+
+    if (png) {
+      return (
+        <img
+          onClick={onClick}
+          className={className}
+          width={size}
+          height={size}
+          src={Component}
+          alt=""
+        />
+      );
+    } else if (Component) {
+      return (
+        <Component
+          {...{ xmlns, version, onClick, ...iconProps }}
+          className={className}
+          width={size}
+          height={size}
+          onMouseEnter={this.onIconHover}
+          onMouseLeave={this.onIconHover}
+          onMouseUp={this.onIconPush}
+          onMouseDown={this.onIconPush}
+          color={iconHover}
+          notify={notification}
+        />
+      );
+    }
+
+    return null;
+  }
+}
 
 Icon.propTypes = {
   className: string,
@@ -70,10 +115,13 @@ Icon.propTypes = {
   name: string.isRequired,
   onClick: func,
   png: bool,
+  hover: string,
 };
 
 Icon.defaultProps = {
   size: 24,
+  notification: false,
+  hovered: false,
   onClick: () => {},
 };
 

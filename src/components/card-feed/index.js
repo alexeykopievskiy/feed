@@ -8,6 +8,8 @@ import Link from '../link';
 import Notifications from '../notifications';
 import Button from '../button';
 import Icon from '../icon';
+import DropdownMenu from '../dropdown-menu';
+import DropdownMenuItem from '../dropdown-menu-item';
 
 import avatarSmall from '../../assets/avatar-profile.png';
 import contentMain from '../../assets/card_1.png';
@@ -24,15 +26,16 @@ class CardFeed extends React.PureComponent {
       isCardHover: false,
       isAuthorActive: false,
       isDropdownActive: false,
+      isDropdownElementHovered: false,
     };
   }
 
   onHoverContainer = () => {
-    this.setState({ isCardHover: !this.state.isCardHover });
+    !this.state.isDropdownActive && this.setState({ isCardHover: !this.state.isCardHover });
   };
 
   handleAuthorClick = () => {
-    this.setState({ isAuthorActive: !this.state.isAuthorActive });
+   this.setState({ isAuthorActive: !this.state.isAuthorActive });
   };
 
   handleDropdownClick = () => {
@@ -40,8 +43,7 @@ class CardFeed extends React.PureComponent {
   };
 
   render() {
-    const { className } = this.props;
-    const { isCardHover, isAuthorActive, isDropdownActive } = this.state;
+    const { isCardHover, isAuthorActive, isDropdownActive, isDropdownElementHovered } = this.state;
 
     return (
       <div
@@ -53,24 +55,11 @@ class CardFeed extends React.PureComponent {
         )}
       >
         {isDropdownActive && (
-          <div className={styles['dropdown']}>
-            <Button theme="null" className={styles['dropdown-btn']}>
-              <Icon className={styles['dropdown-icon']} name="hide" size={16} />
-              <span className={styles['dropdown-text']}>Hide</span>
-            </Button>
-            <Button theme="null" className={styles['dropdown-btn']}>
-              <Icon className={styles['dropdown-icon']} name="flag" size={16} />
-              <span className={styles['dropdown-text']}>Flag</span>
-            </Button>
-            <Button theme="null" className={styles['dropdown-btn']}>
-              <Icon
-                className={styles['dropdown-icon']}
-                name="share"
-                size={16}
-              />
-              <span className={styles['dropdown-text']}>Share</span>
-            </Button>
-          </div>
+          <DropdownMenu>
+            <DropdownMenuItem icon="hide">Hide</DropdownMenuItem>
+            <DropdownMenuItem icon="flag">Flag</DropdownMenuItem>
+            <DropdownMenuItem icon="share">Share</DropdownMenuItem>
+          </DropdownMenu>
         )}
         {isAuthorActive && (
           <div className={styles['popup-author']}>
@@ -152,7 +141,7 @@ class CardFeed extends React.PureComponent {
                 <p className={styles['header-title']}>Bruno montero</p>
               </div>
             </Button>
-            <Button theme="null" onClick={this.handleDropdownClick}>
+            <Button className={styles['header-more']} theme="null" onClick={this.handleDropdownClick}>
               <Icon
                 name="more"
                 className={cls(

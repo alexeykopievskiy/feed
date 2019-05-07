@@ -4,8 +4,8 @@ import cls from 'classnames';
 import { Button as ButtonAntd } from 'antd';
 import styles from './index.scss';
 
-const themes = ['default', 'null', 'link', 'black-link', 'red-link', 'empty'];
-const sizes = ['lg', 'md', 'xs'];
+const themes = ['default', 'null', 'dark', 'black-link', 'red-link', 'empty'];
+const sizes = ['lg', 'md', 'sm'];
 
 const Button = props => {
   const { theme, size, ...other } = props;
@@ -36,7 +36,6 @@ Button.propTypes = {
 };
 
 Button.defaultProps = {
-  low: false,
   theme: themes[0],
   onClick: () => {},
 };
