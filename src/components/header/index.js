@@ -8,7 +8,7 @@ import Link from '../link';
 import Notifications from '../notifications';
 import Button from '../button';
 
-import avatar from '../../assets/avatar-profile.png';
+import avatar from '../../assets/avatar-profile.jpg';
 
 const Header = props => {
   const { className } = props;
@@ -37,11 +37,9 @@ const Header = props => {
       <div className={styles['status-bar']}>
         <Notifications />
         <Button size="md">Create project</Button>
-        <div className={styles['avatar']}>
-          <Button theme="null">
-            <img src={avatar} />
-          </Button>
-        </div>
+        <Button theme="null">
+          <img className={styles['avatar']} src={avatar} />
+        </Button>
       </div>
     </header>
   );

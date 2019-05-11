@@ -138,6 +138,8 @@
 .avatar {
   margin-right: 12px;
   width: 17px;
+  height: 17px;
+  border-radius: 50%;
 }
 
 .header {
@@ -193,7 +195,20 @@
     background-color: #ffffff;
     position: absolute;
     z-index: 1;
-    top: 40px;
+    top: 45px;
+    border-radius: 8px;
+
+    &:before {
+      content: '';
+      width: 0;
+      height: 0;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-bottom: 10px solid white;
+      top: -7px;
+      left: 8.5px;
+      position: absolute;
+    }
 
     &-head {
       display: flex;
@@ -206,6 +221,7 @@
       width: 29px;
       height: 29px;
       margin-right: 9px;
+      border-radius: 50%;
     }
 
     &-title {
@@ -227,6 +243,12 @@
     &-badges {
       padding: 16px 19px 17px;
       border-bottom: 1px solid #e7e7ea;
+    }
+
+    &-img {
+      width: 91px;
+      height: 66px;
+      border-radius: 8px;
     }
   }
 }

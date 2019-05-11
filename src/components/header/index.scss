@@ -35,7 +35,6 @@
     &:active,
     &:focus {
       color: #3b3a3a;
-      font-weight: 700;
     }
 
     &:visited {
@@ -53,4 +52,5 @@
   width: 29px;
   height: 29px;
   margin-left: 25px;
+  border-radius: 50%;
 }

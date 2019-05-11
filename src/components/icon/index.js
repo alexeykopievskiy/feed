@@ -14,6 +14,7 @@ import hide from './svg/hide';
 import share from './svg/share';
 import flag from './svg/flag';
 import followers from './svg/followers';
+import cross from './svg/cross';
 
 const { bool, number, func, string } = PropTypes;
 
@@ -29,6 +30,7 @@ const components = {
   share,
   flag,
   followers,
+  cross,
 };
 
 const xmlns = 'http://www.w3.org/2000/svg';
@@ -45,6 +47,7 @@ class Icon extends React.PureComponent {
   }
 
   onIconHover = () => {
+    console.log('aaas')
     this.setState({ isIconHovered: !this.state.isIconHovered });
   };
 
@@ -62,20 +65,14 @@ class Icon extends React.PureComponent {
       hover,
       hovered,
       notification,
+      color,
+      press,
       ...iconProps
     } = this.props;
     const { isIconHovered, isIconActive } = this.state;
     const Component = components[name];
     let className = cls(styles.icon, this.props.className, png && styles.png);
-
-    let iconHover =
-      isIconHovered || hovered || isIconActive
-        ? hover
-          ? hover
-          : isIconActive
-          ? '#9f9fab'
-          : '#4e47ee'
-        : '#3b3a3a';
+    
 
     if (png) {
       return (
@@ -99,7 +96,7 @@ class Icon extends React.PureComponent {
           onMouseLeave={this.onIconHover}
           onMouseUp={this.onIconPush}
           onMouseDown={this.onIconPush}
-          color={iconHover}
+          color={color}
           notify={notification}
         />
       );

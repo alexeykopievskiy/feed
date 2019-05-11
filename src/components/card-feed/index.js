@@ -11,12 +11,12 @@ import Icon from '../icon';
 import DropdownMenu from '../dropdown-menu';
 import DropdownMenuItem from '../dropdown-menu-item';
 
-import avatarSmall from '../../assets/avatar-profile.png';
+import avatarSmall from '../../assets/avatar-profile.jpg';
 import contentMain from '../../assets/card_1.png';
 
 import popup1 from '../../assets/popup_1.png';
-import popup2 from '../../assets/popup_2.png';
-import popup3 from '../../assets/popup_3.png';
+import popup2 from '../../assets/popup_2.jpg';
+import popup3 from '../../assets/popup_3.jpg';
 
 class CardFeed extends React.PureComponent {
   constructor(props) {
@@ -26,16 +26,23 @@ class CardFeed extends React.PureComponent {
       isCardHover: false,
       isAuthorActive: false,
       isDropdownActive: false,
-      isDropdownElementHovered: false,
+      isDropdownItemHovered: false,
     };
   }
 
+  handleDropdownItemHover = () => {
+    this.setState({
+      isDropdownItemHovered: !this.state.isDropdownItemHovered,
+    });
+  };
+
   onHoverContainer = () => {
-    !this.state.isDropdownActive && this.setState({ isCardHover: !this.state.isCardHover });
+    !this.state.isDropdownActive &&
+      this.setState({ isCardHover: !this.state.isCardHover });
   };
 
   handleAuthorClick = () => {
-   this.setState({ isAuthorActive: !this.state.isAuthorActive });
+    this.setState({ isAuthorActive: !this.state.isAuthorActive });
   };
 
   handleDropdownClick = () => {
@@ -43,7 +50,12 @@ class CardFeed extends React.PureComponent {
   };
 
   render() {
-    const { isCardHover, isAuthorActive, isDropdownActive, isDropdownElementHovered } = this.state;
+    const {
+      isCardHover,
+      isAuthorActive,
+      isDropdownActive,
+      isDropdownItemHovered,
+    } = this.state;
 
     return (
       <div
@@ -116,13 +128,13 @@ class CardFeed extends React.PureComponent {
               </div>
               <div className={styles['popup-author-content']}>
                 <Link to="">
-                  <img src={popup1} />
+                  <img className={styles['popup-author-img']} src={popup1} />
                 </Link>
                 <Link to="">
-                  <img src={popup2} />
+                  <img className={styles['popup-author-img']} src={popup2} />
                 </Link>
                 <Link to="">
-                  <img src={popup3} />
+                  <img className={styles['popup-author-img']} src={popup3} />
                 </Link>
               </div>
             </div>
@@ -141,16 +153,48 @@ class CardFeed extends React.PureComponent {
                 <p className={styles['header-title']}>Bruno montero</p>
               </div>
             </Button>
-            <Button className={styles['header-more']} theme="null" onClick={this.handleDropdownClick}>
-              <Icon
-                name="more"
-                className={cls(
-                  styles['icon-more'],
-                  isCardHover && styles['icon--hover']
-                )}
-                size={12}
-              />
-            </Button>
+            {!isDropdownActive && (
+              <Button
+                onMouseEnter={this.handleDropdownItemHover}
+                onMouseLeave={this.handleDropdownItemHover}
+                className={styles['header-more']}
+                theme="null"
+                onClick={this.handleDropdownClick}
+              >
+                <Icon
+                  name="more"
+                  color="#9f9fab"
+                  hover="#3b3a3a"
+                  press="#e0e0e8"
+                  className={cls(
+                    styles['icon-more'],
+                    isCardHover && styles['icon--hover']
+                  )}
+                  size={12}
+                />
+              </Button>
+            )}
+            {isDropdownActive && (
+              <Button
+                onMouseEnter={this.handleDropdownItemHover}
+                onMouseLeave={this.handleDropdownItemHover}
+                className={styles['header-more']}
+                theme="null"
+                onClick={this.handleDropdownClick}
+              >
+                <Icon
+                  name="cross"
+                  color="#9f9fab"
+                  hover="#3b3a3a"
+                  press="#e0e0e8"
+                  className={cls(
+                    styles['icon-more'],
+                    isCardHover && styles['icon--hover']
+                  )}
+                  size={12}
+                />
+              </Button>
+            )}
           </div>
           <div className={styles['content']}>
             <div className={styles['content-main']}>
