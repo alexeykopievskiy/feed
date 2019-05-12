@@ -145,6 +145,10 @@
   border-radius: 50%;
 }
 
+.menu {
+  display: none !important;
+}
+
 .badge {
   display: flex;
   align-items: center;
@@ -193,6 +197,10 @@
     &-collapse-container {
       width: 328px;
     }
+  }
+
+  .menu {
+    display: block !important;
   }
 
   .logo {

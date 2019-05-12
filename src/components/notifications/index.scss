@@ -1,6 +1,10 @@
 .notification-bar {
   display: flex;
   margin-right: 27px;
+
+  &--mobile {
+    display: none;
+  }
 }
 
 .notification-item {
