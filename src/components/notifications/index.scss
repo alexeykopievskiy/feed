@@ -12,3 +12,31 @@
     margin-right: 0;
   }
 }
+
+@media(max-width: 1024px) {
+  .notification-bar {
+    margin: 0;
+
+    &--mobile {
+      display: none;
+    }
+  }
+
+  .notification-item {
+    margin-right: 27px;
+  }
+}
+
+@media(max-width: 767px) {
+  .notification-bar {
+    display: none;
+
+    &--mobile {
+      display: flex;
+    }
+  }
+
+  .notification-item {
+    margin-right: 28px;
+  }
+}

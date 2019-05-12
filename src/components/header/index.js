@@ -7,43 +7,76 @@ import Logo from '../logo';
 import Link from '../link';
 import Notifications from '../notifications';
 import Button from '../button';
+import Icon from '../icon';
 
 import avatar from '../../assets/avatar-profile.jpg';
 
-const Header = props => {
-  const { className } = props;
+class Header extends React.PureComponent {
+  constructor(props) {
+    super(props);
 
-  return (
-    <header className={cls(styles['header'], className)}>
-      <div className={styles['nav-bar']}>
-        <Link to="">
-          <Logo className={styles['logo']} />
-        </Link>
-        <div className={styles['nav']}>
-          <Link className={styles['nav-item']} to="">
-            Feed
+    this.state = {
+      isMenuOpen: false,
+    };
+  }
+
+  onMenuOpen = () => {
+    this.setState({ isMenuOpen: !this.state.isMenuOpen });
+  };
+
+  render() {
+    const { className } = this.props;
+    const { isMenuOpen } = this.state;
+
+    return (
+      <header className={cls(styles['header'], className)}>
+        {isMenuOpen && (
+          <div className={styles['header-collapse']}>
+            <div className={styles['header-collapse-container']}>
+              <div className={styles['header-collapse-head']}>
+                <Icon
+                  name="cross"
+                  onClick={this.onMenuOpen}
+                  size={22}
+                  color="#d2d2db"
+                />
+              </div>
+            </div>
+          </div>
+        )}
+        <div className={styles['nav-bar']}>
+          <Icon name="menu" size={25} onClick={this.onMenuOpen} />
+          <Link to="">
+            <Logo className={styles['logo']} />
           </Link>
-          <Link className={styles['nav-item']} to="">
-            Explore
-          </Link>
-          <Link className={styles['nav-item']} to="">
-            ArtFeed
-          </Link>
-          <Link className={styles['nav-item']} to="">
-            ArtBlog
-          </Link>
+          <div className={styles['nav']}>
+            <Link className={styles['nav-item']} to="">
+              Feed
+            </Link>
+            <Link className={styles['nav-item']} to="">
+              Explore
+            </Link>
+            <Link className={styles['nav-item']} to="">
+              ArtFeed
+            </Link>
+            <Link className={styles['nav-item']} to="">
+              ArtBlog
+            </Link>
+          </div>
         </div>
-      </div>
-      <div className={styles['status-bar']}>
-        <Notifications />
-        <Button size="md">Create project</Button>
-        <Button theme="null">
-          <img className={styles['avatar']} src={avatar} />
-        </Button>
-      </div>
-    </header>
-  );
-};
+        <div className={styles['status-bar']}>
+          <Notifications />
+          <Button size="md" className={styles['button-create']}>
+            Create project
+          </Button>
+          <Button className={styles['button-avatar']} theme="null">
+            <img className={styles['avatar']} src={avatar} />
+          </Button>
+        </div>
+      </header>
+    );
+  }
+}
 
 const { string } = PropTypes;
 

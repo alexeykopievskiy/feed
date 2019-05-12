@@ -1,11 +1,33 @@
 .header {
   height: 60px;
-  border-bottom: 1px solid #e0e0e8;
+  border-bottom: 1px solid #e0e0e89c;
   padding: 0 42px;
   display: flex;
   align-items: center;
   background-color: #ffffff;
   justify-content: space-between;
+
+  &-collapse {
+    width: 100%;
+    background: rgba(78, 71, 238, 0.85);
+    position: fixed;
+    height: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 5;
+
+    &-container {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      top: 0;
+      width: 257px;
+      background: #fff;
+      border-radius: 0 24px 24px 0;
+    }
+  }
 }
 
 .logo {
@@ -34,7 +56,7 @@
     &:hover,
     &:active,
     &:focus {
-      color: #3b3a3a;
+      color: rgb(78, 71, 238);
     }
 
     &:visited {
@@ -53,4 +75,23 @@
   height: 29px;
   margin-left: 25px;
   border-radius: 50%;
+}
+
+@media(max-width: 1024px) {
+  .header {
+    padding: 0 28px;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .button {
+    &-create {
+      display: none;
+    }
+    &-avatar {
+      display: none;
+    }
+  }
 }

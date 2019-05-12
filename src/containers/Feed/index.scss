@@ -7,3 +7,23 @@
   display: flex;
   flex-wrap: wrap;
 }
+
+@media(max-width: 1024px) {
+  .feed-container {
+    padding: 0 18px;
+    justify-content: space-between;
+  }
+}
+
+@media(max-width: 767px) {
+  .feed-container {
+    padding: 0 22px;
+    justify-content: space-between;
+  }
+}
+
+@media(max-width: 520px) {
+  .feed-container {
+    justify-content: center;
+  }
+}

@@ -15,6 +15,7 @@ import share from './svg/share';
 import flag from './svg/flag';
 import followers from './svg/followers';
 import cross from './svg/cross';
+import menu from './svg/menu';
 
 const { bool, number, func, string } = PropTypes;
 
@@ -31,6 +32,7 @@ const components = {
   flag,
   followers,
   cross,
+  menu,
 };
 
 const xmlns = 'http://www.w3.org/2000/svg';
@@ -46,14 +48,22 @@ class Icon extends React.PureComponent {
     };
   }
 
-  onIconHover = () => {
-    console.log('aaas')
-    this.setState({ isIconHovered: !this.state.isIconHovered });
+  onIconHoverUp = () => {
+    this.setState({ isIconHovered: true });
   };
 
-  onIconPush = () => {
-    console.log('push');
-    this.setState({ isIconActive: !this.state.isIconActive });
+  onIconHoverDown = () => {
+    this.setState({ isIconHovered: false });
+  };
+
+  onIconUp = () => {
+    this.setState({ isIconActive: false });
+    this.setState({ isIconHovered: false });
+  };
+
+  onIconDown = () => {
+    this.setState({ isIconActive: true });
+    this.setState({ isIconHovered: false });
   };
 
   render() {
@@ -72,7 +82,16 @@ class Icon extends React.PureComponent {
     const { isIconHovered, isIconActive } = this.state;
     const Component = components[name];
     let className = cls(styles.icon, this.props.className, png && styles.png);
-    
+
+    let iconColor = '';
+
+    if (isIconActive) {
+      iconColor = press ? press : '#e0e0e8';
+    } else if (isIconHovered || hovered) {
+      iconColor = hover ? hover : '#4e47ee';
+    } else {
+      iconColor = color ? color : '#3b3a3a';
+    }
 
     if (png) {
       return (
@@ -92,11 +111,11 @@ class Icon extends React.PureComponent {
           className={className}
           width={size}
           height={size}
-          onMouseEnter={this.onIconHover}
-          onMouseLeave={this.onIconHover}
-          onMouseUp={this.onIconPush}
-          onMouseDown={this.onIconPush}
-          color={color}
+          onMouseEnter={this.onIconHoverUp}
+          onMouseLeave={this.onIconHoverDown}
+          onMouseUp={this.onIconUp}
+          onMouseDown={this.onIconDown}
+          color={iconColor}
           notify={notification}
         />
       );
