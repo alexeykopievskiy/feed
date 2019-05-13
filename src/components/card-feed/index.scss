@@ -258,10 +258,15 @@
 }
 
 @media (max-width: 1024px) {
+  .container {
+    padding-top: 5px;
+    padding-bottom: 32px;
+  }
+
   .icon {
     &-more {
       display: none;
-      
+
       &--mobile {
         display: block!important;
       }

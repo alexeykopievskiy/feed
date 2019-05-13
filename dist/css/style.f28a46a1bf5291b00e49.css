@@ -1,4 +1,4 @@
-/*! renta-Sun May 12 2019 13:36:00 GMT+0300 (GMT+03:00). RELEASE */
+/*! renta-Mon May 13 2019 15:55:58 GMT+0300 (GMT+03:00). RELEASE */
 @import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900);
 /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
 
@@ -627,7 +627,7 @@ body {
   ._2Xd71rT {
       position: absolute;
       right: 23px;
-      top: 18px;
+      top: 23px;
     }
 
   ._3Sgkhh2 {
@@ -671,6 +671,8 @@ body {
     height: 46px;
     border-radius: 43px;
     font-size: 15px !important;
+    width: 191px;
+    height: 48px;
   }
 
 ._1H0JiOS {
@@ -691,7 +693,7 @@ body {
       margin: 0 0 32px 0;
       text-align: center;
       color: #3b3a3a;
-      font-size: 20px;
+      font-size: 22px;
     }
 
 ._1Pkvqdc {
@@ -797,6 +799,7 @@ body {
       display: -webkit-box;
       display: flex;
       margin-left: 28px;
+      width: 66px;
     }
 
   ._1H0JiOS {
@@ -7970,6 +7973,10 @@ a.ant-btn-sm {
     display: none;
   }
 
+._1gJF8-v {
+      display: none;
+    }
+
 ._1hPsRHN {
     display: block;
   }
@@ -8190,6 +8197,16 @@ a.ant-btn-sm {
       height: 66px;
       border-radius: 8px;
     }
+
+@media (max-width: 1024px) {
+    ._36lv3k3 {
+      display: none;
+    }
+      
+      ._1gJF8-v {
+        display: block!important;
+      }
+}
 
 ._2Sp3SGF {
   position: absolute;

@@ -36,7 +36,7 @@
     }
 
     &-head {
-      padding: 18px 23px 23px 21px;
+      padding: 24px 27px 26px 25px;
       border-bottom: 1px solid #e0e0e89c;
       position: relative;
       display: flex;
@@ -46,16 +46,16 @@
 
     &-icon {
       position: absolute;
-      right: 23px;
-      top: 23px;
+      right: 27px;
+      top: 32px;
     }
 
     &-avatar {
       margin-right: 10px;
 
       img {
-        width: 21px;
-        height: 21px;
+        width: 29px;
+        height: 29px;
         border-radius: 50%;
       }
     }
@@ -90,9 +90,10 @@
     width: 184px;
     height: 46px;
     border-radius: 43px;
-    font-size: 15px !important;
+    font-size: 16px !important;
     width: 191px;
     height: 48px;
+    font-weight: 500;
   }
 }
 
@@ -106,7 +107,7 @@
 
     .nav-item {
       text-align: center;
-      margin: 0 0 32px 0;
+      margin: 0 0 38px 0;
       text-align: center;
       color: #3b3a3a;
       font-size: 22px;
