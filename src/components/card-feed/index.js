@@ -152,6 +152,18 @@ class CardFeed extends React.PureComponent {
                 <p className={styles['header-title']}>Bruno montero</p>
               </div>
             </Button>
+            <Icon
+                onClick={this.handleDropdownClick}
+                name="more"
+                color="#9f9fab"
+                hover="#3b3a3a"
+                press="#e0e0e8"
+                className={cls(
+                  styles['icon-more--mobile'],
+                  isCardHover && styles['icon--hover']
+                )}
+                size={12}
+              />
             {!isDropdownActive && (
               <Icon
                 onClick={this.handleDropdownClick}

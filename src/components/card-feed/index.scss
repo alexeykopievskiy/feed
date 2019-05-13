@@ -39,6 +39,10 @@
 
   &-more {
     display: none;
+
+    &--mobile {
+      display: none;
+    }
   }
 
   &--hover {
@@ -249,6 +253,18 @@
       width: 91px;
       height: 66px;
       border-radius: 8px;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .icon {
+    &-more {
+      display: none;
+      
+      &--mobile {
+        display: block!important;
+      }
     }
   }
 }

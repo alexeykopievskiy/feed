@@ -47,7 +47,7 @@
     &-icon {
       position: absolute;
       right: 23px;
-      top: 18px;
+      top: 23px;
     }
 
     &-avatar {
@@ -91,6 +91,8 @@
     height: 46px;
     border-radius: 43px;
     font-size: 15px !important;
+    width: 191px;
+    height: 48px;
   }
 }
 
@@ -107,7 +109,7 @@
       margin: 0 0 32px 0;
       text-align: center;
       color: #3b3a3a;
-      font-size: 20px;
+      font-size: 22px;
     }
   }
 
@@ -209,6 +211,7 @@
     &--mobile {
       display: flex;
       margin-left: 28px;
+      width: 66px;
     }
   }
 

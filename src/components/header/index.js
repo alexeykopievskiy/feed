@@ -46,7 +46,7 @@ class Header extends React.PureComponent {
                     className={styles['header-collapse-icon']}
                     name="cross"
                     onClick={this.onMenuOpen}
-                    size={22}
+                    size={12}
                     color="#d2d2db"
                   />
                 </div>

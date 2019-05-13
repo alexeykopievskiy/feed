@@ -1,4 +1,4 @@
-/*! renta-Sun May 12 2019 13:28:07 GMT+0300 (GMT+03:00). RELEASE */
+/*! renta-Sun May 12 2019 13:36:00 GMT+0300 (GMT+03:00). RELEASE */
 @import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900);
 /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
 
@@ -729,6 +729,10 @@ body {
   border-radius: 50%;
 }
 
+._27a61T8 {
+  display: none !important;
+}
+
 ._3dW52bD {
   display: -webkit-box;
   display: flex;
@@ -780,6 +784,10 @@ body {
     ._3ZuBH24 {
       width: 328px;
     }
+
+  ._27a61T8 {
+    display: block !important;
+  }
 
   ._1ssMdtJ {
     display: none;
@@ -2964,6 +2972,10 @@ html {
   display: flex;
   margin-right: 27px;
 }
+
+  ._3l_sVbe {
+    display: none;
+  }
 
 ._3rN3Eev {
   margin-right: 17px;
