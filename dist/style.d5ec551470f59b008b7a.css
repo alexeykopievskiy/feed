@@ -1,4 +1,4 @@
-/*! renta-Mon May 13 2019 15:55:58 GMT+0300 (GMT+03:00). RELEASE */
+/*! renta-Mon May 13 2019 18:55:20 GMT+0300 (GMT+03:00). RELEASE */
 @import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900);
 /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
 
@@ -612,7 +612,7 @@ body {
       }
 
   ._3ePOzQV {
-      padding: 18px 23px 23px 21px;
+      padding: 24px 27px 26px 25px;
       border-bottom: 1px solid #e0e0e89c;
       position: relative;
       display: -webkit-box;
@@ -626,8 +626,8 @@ body {
 
   ._2Xd71rT {
       position: absolute;
-      right: 23px;
-      top: 23px;
+      right: 27px;
+      top: 32px;
     }
 
   ._3Sgkhh2 {
@@ -635,8 +635,8 @@ body {
     }
 
   ._3Sgkhh2 img {
-        width: 21px;
-        height: 21px;
+        width: 29px;
+        height: 29px;
         border-radius: 50%;
       }
 
@@ -670,9 +670,10 @@ body {
     width: 184px;
     height: 46px;
     border-radius: 43px;
-    font-size: 15px !important;
+    font-size: 16px !important;
     width: 191px;
     height: 48px;
+    font-weight: 500;
   }
 
 ._1H0JiOS {
@@ -690,7 +691,7 @@ body {
 
 ._2f8EJ4Y ._1Pkvqdc {
       text-align: center;
-      margin: 0 0 32px 0;
+      margin: 0 0 38px 0;
       text-align: center;
       color: #3b3a3a;
       font-size: 22px;
@@ -7974,7 +7975,7 @@ a.ant-btn-sm {
   }
 
 ._1gJF8-v {
-      display: none;
+      display: none!important;
     }
 
 ._1hPsRHN {
@@ -8199,10 +8200,14 @@ a.ant-btn-sm {
     }
 
 @media (max-width: 1024px) {
+  ._1OKJsed {
+    padding-top: 5px;
+    padding-bottom: 32px;
+  }
     ._36lv3k3 {
       display: none;
     }
-      
+
       ._1gJF8-v {
         display: block!important;
       }
