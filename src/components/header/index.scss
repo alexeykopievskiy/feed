@@ -87,8 +87,6 @@
 
 .button-create {
   &--mobile {
-    position: absolute;
-    bottom: 40px;
     left: 50%;
     transform: translateX(-50%);
     width: 184px;
@@ -98,6 +96,7 @@
     width: 191px;
     height: 48px;
     font-weight: 500;
+    margin-bottom: 60px;
   }
 }
 
@@ -114,7 +113,7 @@
       margin: 0 0 38px 0;
       text-align: center;
       color: #3b3a3a;
-      font-size: 22px;
+      font-size: 16px;
     }
   }
 
@@ -193,10 +192,6 @@
   }
 }
 
-.logo--mobile {
-  display: none;
-}
-
 @media (max-width: 1024px) {
   .header {
     padding: 0 28px;
@@ -206,18 +201,14 @@
     }
   }
 
-  .menu {
-    display: block !important;
+  .logo {
+    width: 72px;
+    margin-top: -2px;
+    margin-left: 28px;
   }
 
-  .logo {
-    display: none;
-
-    &--mobile {
-      display: flex;
-      margin-left: 28px;
-      width: 66px;
-    }
+  .menu {
+    display: block !important;
   }
 
   .nav {

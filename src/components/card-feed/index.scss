@@ -47,10 +47,6 @@
 
   &-more {
     display: none;
-
-    &--mobile {
-      display: none!important;
-    }
   }
 
   &--hover {
@@ -71,6 +67,8 @@
   }
 
   img {
+    border-radius: 14px;
+
     @media (max-width: 525px) {
       width: 100%;
     }
@@ -280,6 +278,7 @@
   .container {
     padding-top: 5px;
     padding-bottom: 32px;
+    margin: 0 3px;
   }
 
   .icon {

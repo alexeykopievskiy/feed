@@ -8,10 +8,21 @@
   flex-wrap: wrap;
 }
 
+@media(max-width: 1199px) {
+  .feed-container {
+    padding: 0 32px;
+    justify-content: space-between;
+
+    &:after {
+      content: '';
+      flex: auto;
+    }
+  }
+}
+
 @media(max-width: 1024px) {
   .feed-container {
     padding: 0 18px;
-    justify-content: space-between;
   }
 }
 

@@ -27,17 +27,17 @@ const Notifications = props => {
       <div className={styles['notification-bar--mobile']}>
         <div className={styles['notification-item']}>
           <Button theme="null">
-            <Icon name="search" size={22} />
+            <Icon name="search" size={20} />
           </Button>
         </div>
         <div className={styles['notification-item']}>
           <Button theme="null">
-            <Icon name="messages" notification="true" size={22} />
+            <Icon name="messages" notification="true" size={20} />
           </Button>
         </div>
         <div className={styles['notification-item']}>
           <Button theme="null">
-            <Icon name="notification" size={22} />
+            <Icon name="notification" size={20} />
           </Button>
         </div>
       </div>
