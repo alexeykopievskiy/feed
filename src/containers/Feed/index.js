@@ -33,7 +33,6 @@ class FeedContainer extends React.PureComponent {
             <CardFeed logo={author1} image={image6} author="Fuckthedesign" />
             <CardFeed logo={author2} image={image7} author="Bruno Montero" />
             <CardFeed logo={author3} image={image8} author="SMPL" />
-            <CardFeed logo={author4} image={image1} author="Paul van dyke"/>
           </div>
         </Container>
       </div>
