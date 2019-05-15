@@ -7,6 +7,10 @@
 
   &--hover {
     background-color: #f6f7fb;
+
+    @media (max-width: 1024px) {
+      background: #fff;
+    }
   }
 
   @media (max-width: 525px) {
@@ -68,6 +72,7 @@
 
   img {
     border-radius: 14px;
+    height: 161px;
 
     @media (max-width: 525px) {
       width: 100%;
@@ -220,6 +225,10 @@
     top: 45px;
     border-radius: 8px;
 
+    @media (max-width: 1024px) {
+      display: none;
+    }
+
     &:before {
       content: '';
       width: 0;
@@ -282,13 +291,7 @@
     margin: 0 3px;
   }
 
-  .icon {
-    &-more {
-      display: none;
-
-      &--mobile {
-        display: block!important;
-      }
-    }
+  .icon-more {
+    display: block;
   }
 }
