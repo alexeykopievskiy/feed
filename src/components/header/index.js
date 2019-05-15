@@ -106,7 +106,7 @@ class Header extends React.PureComponent {
           </div>
         )}
         <div className={styles['nav-bar']}>
-          <Icon name="menu" size={22} className={styles['menu']} onClick={this.onMenuOpen} />
+          <Icon name="menu" size={20} className={styles['menu']} onClick={this.onMenuOpen} />
           <Link to="">
             <Logo className={styles['logo']} />
           </Link>
