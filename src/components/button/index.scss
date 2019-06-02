@@ -38,6 +38,7 @@
 
 .dark {
   background-color: #3b3a3a;
+  border: 1px solid #3b3a3a;
   box-shadow: none;
   color: #fff;
   font-weight: 500;
@@ -45,11 +46,13 @@
 
   &:visited {
     background-color: #3b3a3a;
+    border: 1px solid #3b3a3a;
     color: #fff;
   }
 
   &:hover, 
   &:focus {
+    border: 1px solid #ff84c2;
     background-color: #ff84c2;
     color: #fff;
   }
@@ -70,5 +73,5 @@
 .sm {
   height: 28px;
   border-radius: 35px;
-  padding: 0 20px;
+  padding: 0 19px;
 }

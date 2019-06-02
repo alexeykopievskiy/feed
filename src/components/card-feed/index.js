@@ -78,10 +78,7 @@ class CardFeed extends React.PureComponent {
             >
               <div className={styles['popup-author-head']}>
                 <div className={styles['header-author']}>
-                  <img
-                    className={styles['popup-author-avatar']}
-                    src={logo}
-                  />
+                  <img className={styles['popup-author-avatar']} src={logo} />
                   <p className={styles['popup-author-title']}>{author}</p>
                 </div>
                 <Button size="sm" theme="dark">
@@ -147,18 +144,20 @@ class CardFeed extends React.PureComponent {
                 <p className={styles['header-title']}>{author}</p>
               </div>
             </Button>
-            <Icon
-              onClick={this.handleDropdownClick}
-              name="more"
-              color="#9f9fab"
-              hover="#3b3a3a"
-              press="#e0e0e8"
-              className={cls(
-                styles['icon-more'],
-                isCardHover && styles['icon--hover']
-              )}
-              size={12}
-            />
+            <div className={styles['more-btn']}>
+              <Icon
+                onClick={this.handleDropdownClick}
+                name="more"
+                color="#9f9fab"
+                hover="#3b3a3a"
+                press="#e0e0e8"
+                className={cls(
+                  styles['icon-more'],
+                  isCardHover && styles['icon--hover']
+                )}
+                size={12}
+              />
+            </div>
           </div>
           <div className={styles['content']}>
             <div className={styles['content-main']}>

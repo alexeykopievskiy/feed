@@ -85,20 +85,20 @@ class Header extends React.PureComponent {
               </div>
               <div className={styles['header-collapse-content']}>
                 <div className={styles['nav-mobile']}>
-                  <Link className={styles['nav-item']} to="">
+                  <Link onClick={this.onMenuOpen} className={styles['nav-item']} to="feed">
                     Feed
                   </Link>
-                  <Link className={styles['nav-item']} to="">
+                  <Link onClick={this.onMenuOpen} className={styles['nav-item']} to="explore">
                     Explore
                   </Link>
-                  <Link className={styles['nav-item']} to="">
+                  <Link onClick={this.onMenuOpen} className={styles['nav-item']} to="">
                     ArtFeed
                   </Link>
-                  <Link className={styles['nav-item']} to="">
+                  <Link onClick={this.onMenuOpen} className={styles['nav-item']} to="">
                     ArtBlog
                   </Link>
                 </div>
-                <Button className={styles['button-create--mobile']}>
+                <Button onClick={this.onMenuOpen} className={styles['button-create--mobile']}>
                   Create project
                 </Button>
               </div>
@@ -111,10 +111,10 @@ class Header extends React.PureComponent {
             <Logo className={styles['logo']} />
           </Link>
           <div className={styles['nav']}>
-            <Link className={styles['nav-item']} to="">
+            <Link className={styles['nav-item']} to="feed">
               Feed
             </Link>
-            <Link className={styles['nav-item']} to="">
+            <Link className={styles['nav-item']} to="explore">
               Explore
             </Link>
             <Link className={styles['nav-item']} to="">

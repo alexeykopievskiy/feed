@@ -16,6 +16,16 @@ import flag from './svg/flag';
 import followers from './svg/followers';
 import cross from './svg/cross';
 import menu from './svg/menu';
+import all from './svg/all';
+import architecture from './svg/architecture';
+import design from './svg/design';
+import illustration from './svg/illustration';
+import motion from './svg/motion';
+import photo from './svg/photo';
+import product from './svg/product';
+import ui from './svg/ui';
+import ux from './svg/ux';
+import plus from './svg/plus';
 
 const { bool, number, func, string } = PropTypes;
 
@@ -33,6 +43,16 @@ const components = {
   followers,
   cross,
   menu,
+  all,
+  architecture,
+  design,
+  illustration,
+  motion,
+  photo,
+  product,
+  ui, 
+  ux,
+  plus,
 };
 
 const xmlns = 'http://www.w3.org/2000/svg';

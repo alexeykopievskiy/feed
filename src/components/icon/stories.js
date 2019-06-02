@@ -1,5 +1,4 @@
 import React from 'react';
-import cls from 'classnames';
 import { storiesOf } from '@storybook/react';
 import Icon from '.';
 import styles from './stories.scss';
@@ -21,6 +20,16 @@ stories.add('x24', () => {
       <Icon name="flag" className={styles.icon} />
       <Icon name="followers" className={styles.icon} />
       <Icon name="cross" className={styles.icon} />
+      <Icon name="all" className={styles.icon} />
+      <Icon name="architecture" className={styles.icon} />
+      <Icon name="design" className={styles.icon} />
+      <Icon name="illustration" className={styles.icon} />
+      <Icon name="motion" className={styles.icon} />
+      <Icon name="photo" className={styles.icon} />
+      <Icon name="product" className={styles.icon} />
+      <Icon name="ui" className={styles.icon} />
+      <Icon name="ux" className={styles.icon} />
+      <Icon name="plus" className={styles.icon} />
     </div>
   );
 });
